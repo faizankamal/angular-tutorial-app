@@ -1,0 +1,23 @@
+<div class="container">
+  <h3>
+    Customp Binding Demo!
+  </h3>
+  <br><br>
+
+  <app-childcomponent [userData]="userName" (savedEvent)="updateStatus()"></app-childcomponent>
+  <!-- We cannot put any string in place of parentObject, we can pass only variable of parent here -->
+
+  <br><br>
+  <h4>
+    Customp Event binding Demo!
+  </h4>
+  <p>Status : {{status}}</p>
+
+  <br>
+
+  <h4>
+    ngModel Example
+  </h4>
+  <label>Enter name</label><input type="text" [(ngModel)]='userName' />
+  <p>{{userName}}</p>
+</div>

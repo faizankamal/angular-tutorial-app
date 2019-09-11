@@ -1,0 +1,31 @@
+<div class="container">
+  <p> Login Form </p>
+
+  <!-- formControlName="emailid" -->
+
+  <div>
+    <form [formGroup]="formGroup" (ngSubmit)="onClickSubmit(formGroup.value)">
+      <label>Email : </label>
+      <input #emailId type="text" class="form-control" formControlName="emailid">
+      <br />
+
+      <label>Name : </label>
+      <input type="text" class="form-control" formControlName="name">
+      <br />
+
+      <label>Passowrd : </label>
+      <input type="password" class="form-control" formControlName="passwd">
+      <br />
+
+      <input type="submit" [disabled]="!formGroup.valid" class="btn btn-primary" value="Enter">
+
+      <button class="form-control" (click)="showLocalReferenceValue(emailId)">Show Local Ref</button>
+    </form>
+  </div>
+
+
+  <h4>Data Entered</h4>
+  <p>{{loginData}}</p>
+  <p>Email :: {{dataFromFormGroup}}</p>
+  
+</div>

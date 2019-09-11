@@ -1,0 +1,20 @@
+<div class="container">
+
+<p>User Data :: {{user.first_name}}</p>
+
+<h4>List of users <button class="btn btn-primary" (click)="getUsers()">Load users</button></h4>
+<ul>
+      <li *ngFor="let user of userList">
+            {{user.email}}
+      </li>
+</ul>
+
+<h4>Get User using Debounce</h4>
+<input #text type="text" class="form-control" (keyup)="getEmployees(text)">
+<p>User Data :: {{employee.FirstName}} with ID: {{employee.ID}}</p>
+<p>{{error}}</p>
+
+
+
+<p>Login Successful : {{isSuccess}}</p>
+</div>

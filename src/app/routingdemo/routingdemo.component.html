@@ -1,0 +1,16 @@
+<!-- Start of changes for Router Demo -->
+<div class="container">
+<p>Router Demo</p>
+
+<a routerLink="tab1">Tab1 component</a>
+<br>
+
+<a routerLink="tab2">Tab2 component</a>
+<br><br>
+
+<button type="button" class="btn btn-primary" (click)="openTab('routing/tab1')">Tab 1</button>&nbsp;&nbsp;
+
+<button type="button" class="btn btn-info" (click)="openTab('routing/tab2');">Tab 2</button>
+</div>
+
+<router-outlet></router-outlet>

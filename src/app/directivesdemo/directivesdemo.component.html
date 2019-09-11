@@ -1,0 +1,47 @@
+<div class="container">
+
+  <h3>
+    Directives Demo!
+  </h3>
+
+
+  <div *ngIf="isTrue; else myElseBlock">
+    <h4>My if Block</h4>
+  </div>
+
+  <br>
+
+  <div *ngIf="showifBlock; else myElseBlock">
+    My If block
+  </div>
+
+  <ng-template #myElseBlock>
+    <h4>My Else Block</h4>
+  </ng-template>
+
+  <br>
+
+  <h4>*ngFor Demo : List of Users</h4>
+  <ul>
+    <li *ngFor="let data of userData; let i = index">{{data}} with index : {{i}}</li>
+  </ul>
+
+
+  <h4>Student Data</h4>
+  <ul>
+    <li *ngFor="let data of studentData;">Name :: {{data.name}} and Age :: {{data.age}}</li>
+  </ul>
+
+  <br>
+  <h4>Custom Attribute Directives Demo</h4>
+  <p appHighlight>Saved</p>
+  <p appHighlight>Draft</p>
+  <br>
+
+
+  <h4>NG template Demo</h4>
+  <ng-template [ngIf]="isTrue">
+    My content
+  </ng-template>
+
+</div>

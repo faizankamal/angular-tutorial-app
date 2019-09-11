@@ -1,0 +1,43 @@
+<div class="topnav" id="myTopnav" #myTopnav>
+
+  <a [class.disabled]="true">Angular Tutorial</a>
+
+  <a routerLink='routing' routerLinkActive="active">Routing</a>
+
+  <a routerLink='binding' routerLinkActive="active">Binding</a>
+
+  <a routerLink='custompropertybinding' routerLinkActive="active">Custom Binding</a>
+
+  <a routerLink='directives' routerLinkActive="active">Directives & Custom Directives</a>
+
+  <a routerLink='form' routerLinkActive="active">Form</a>
+
+  <a routerLink='service' routerLinkActive="active">Services & Dependency Inject</a>
+
+  <a routerLink='observe' routerLinkActive="active">Observable Demo</a>
+
+  <a routerLink='http' routerLinkActive="active">HttpClientModule Demo</a>
+
+  <a routerLink='pipe' routerLinkActive="active">Pipe Demo</a>
+
+  <a routerLink='form' routerLinkActive="active">Local Reference And View Child</a>
+
+  <a routerLink='observe' routerLinkActive="active">ng-content</a>
+
+  <a routerLink='storage' routerLinkActive="active">Cookies & Session Storage</a>
+
+  <a href="javascript:void(0);" class="icon" (click)="myFunction(myTopnav)">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<p>{{dataFromEmitter | uppercase }}</p>
+
+<p>{{dataFromSubject | lowercase }}</p>
+
+<div>
+  <app-hello>NG Content Demo</app-hello>
+</div>
+
+
+<router-outlet></router-outlet>
